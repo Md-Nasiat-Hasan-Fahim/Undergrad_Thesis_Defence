@@ -1,0 +1,27 @@
+
+DO:
+
+conda install -c conda-forge -c bioconda diamond mmseqs2 -y
+
+
+
+
+
+# Standard run (no global dereplication — backward compatible)
+python my_code.py \
+  --csv data.csv \
+  --output_dir ./results \
+  --method mmseq \
+  --threshold 0.4 \
+  --parallel_labels 8
+
+# With global pre-dereplication (recommended for your 400k dataset)
+python my_code.py \
+  --csv data.csv \
+  --output_dir ./results \
+  --method mmseq \
+  --threshold 0.4 \
+  --parallel_labels 8 \
+  --global_dereplicate \
+  --global_threshold 0.9 \
+  --min_class_size 50
