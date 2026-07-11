@@ -20,7 +20,7 @@ python my_code.py \
   --csv data.csv \
   --output_dir ./results \
   --method mmseq \
-  --threshold 0.4 \
+  --threshold 0.3 \
   --parallel_labels 8 \
   --global_dereplicate \
   --global_threshold 0.9 \
